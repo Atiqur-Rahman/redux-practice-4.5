@@ -36,15 +36,15 @@ const Footer = () => {
         <div className="mt-4 flex justify-between text-xs text-gray-500">
             <p>{numberOfTodos(todoRemaining.length)} left</p>
             <ul className="flex space-x-1 items-center text-xs">
-                <li className={`cursor-pointer ${status === 'all' && 'font-bold'}`} onClick={() => handleStatusChange('all')}>
+                <li className={`cursor-pointer ${status === 'All' && 'font-bold'}`} onClick={() => handleStatusChange('All')}>
                     All
                 </li>
                 <li>|</li>
-                <li className={`cursor-pointer ${status === 'incomplete' && 'font-bold'}`} onClick={() => handleStatusChange('incomplete')}>
+                <li className={`cursor-pointer ${status === 'Incomplete' && 'font-bold'}`} onClick={() => handleStatusChange('Incomplete')}>
                     Incomplete
                 </li>
                 <li>|</li>
-                <li className={`cursor-pointer ${status === 'complete' && 'font-bold'}`} onClick={() => handleStatusChange('complete')}>
+                <li className={`cursor-pointer ${status === 'Complete' && 'font-bold'}`} onClick={() => handleStatusChange('Complete')}>
                     Complete
                 </li>
                 <li></li>
