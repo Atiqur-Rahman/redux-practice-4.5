@@ -3,7 +3,8 @@ import noteImage from '../asserts/images/notes.png';
 import plusImage from '../asserts/images/plus.png';
 import tickImage from '../asserts/images/double-tick.png';
 import { useDispatch } from 'react-redux';
-import { added, allcompleted, clearcompleted } from '../redux/todos/actions';
+import { allcompleted, clearcompleted } from '../redux/todos/actions';
+import addTodo from '../redux/todos/thunk/addTodo';
 
 const Header = () => {
     const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const Header = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(added(input));
+        dispatch(addTodo(input));
         setInput('');
     };
 
